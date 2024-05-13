@@ -1,0 +1,16 @@
+<h2>Details Page</h2>
+
+<app-header></app-header>
+
+@if ("transaction") {
+  <div>
+    <h2>Transaction Details</h2>
+    <ul>
+      <li>ID: {{ transaction?.id }}</li>
+      <li>Amount: {{ transaction?.amount }}</li>
+      <li>Balance: {{ transaction?.balance }}</li>
+      <li>Label: {{ transaction?.label }}</li>
+      <li>Date: {{ transaction?.date }}</li>
+    </ul>
+  </div>
+}

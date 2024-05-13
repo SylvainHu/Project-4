@@ -1,0 +1,30 @@
+/* Header styling */
+.header {
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  padding: 20px 0; /* Padding */
+}
+
+.container {
+  width: 90%; /* Set container width */
+  margin: 0 auto; /* Center the container */
+}
+
+h1 {
+  margin: 0; /* Remove default margin */
+}
+
+/* Navbar styling */
+.navbar {
+  margin-top: 10px; /* Add some space between title and navbar */
+}
+
+.navbar a {
+  color: #fff; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  margin-right: 10px; /* Add space between links */
+}
+
+.navbar a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

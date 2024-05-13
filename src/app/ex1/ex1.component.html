@@ -1,0 +1,35 @@
+
+<app-header></app-header>
+
+<h2>Exercise 1</h2>
+
+<!-- input -->
+<label for="framework">
+  Your Name:
+  <input id="framework" type="text" placeholder="name" [(ngModel)]="username"/>
+</label>
+
+<!-- font selection -->
+<label for="fontDropdown">Choose a font:</label>
+<select id="fontDropdown" [(ngModel)]="selectedFont">
+  @for (fontOption of fontOptions; track fontOption.name) {
+    <option value="{{ fontOption.fontFamily }}">{{ fontOption.name }}</option>
+  }
+</select>
+
+<!-- font size -->
+<label for="fontSizeInput">Choose a font size:</label>
+<input id="fontSizeInput" type="number" [(ngModel)]="selectedFontSize" placeholder="Font Size">
+
+<!-- alignment -->
+<label>
+  <input type="checkbox" [(ngModel)]="alignLeft" (change)="updateAlignment()"> Left
+</label>
+<label>
+  <input type="checkbox" [(ngModel)]="alignCenter" (change)="updateAlignment()"> Center
+</label>
+<label>
+  <input type="checkbox" [(ngModel)]="alignRight" (change)="updateAlignment()"> Right
+</label>
+
+<h2 style="font-family: {{ selectedFont }}; font-size: {{ selectedFontSize }}px; text-align: {{ alignment }}">Hello {{ username | uppercase }}!</h2>

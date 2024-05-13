@@ -1,0 +1,28 @@
+/* Label styling */
+label {
+  display: block; /* Ensure each label appears on a new line */
+  margin-top: 20px; /* Add space between labels */
+}
+
+/* Input styling */
+input[type="text"],
+input[type="number"] {
+  width: 100%; /* Make inputs fill their container */
+  padding: 8px; /* Add padding */
+  margin-top: 4px; /* Add space above inputs */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 4px; /* Add rounded corners */
+  box-sizing: border-box; /* Ensure padding and border don't affect the width */
+}
+
+/* Checkbox styling */
+label input[type="checkbox"] {
+  margin-right: 5px; /* Add space between checkbox and label text */
+}
+
+/* H2 styling */
+h2 {
+  font-family: Arial, sans-serif; /* Default font family */
+  font-size: 18px; /* Default font size */
+  text-align: left; /* Default text alignment */
+}

@@ -1,0 +1,25 @@
+<h2>Home page for EX3</h2>
+<app-header></app-header>
+
+<table>
+  <thead>
+    <tr>
+      <th (click)="sort('id')">ID</th>
+      <th (click)="sort('amount')">Amount</th>
+      <th (click)="sort('balance')">Balance</th>
+      <th (click)="sort('label')">Label</th>
+      <th (click)="sort('date')">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (transaction of transactions; track transaction.id) {
+      <tr (click)="navigateToDetails(transaction.id)">
+        <td>{{ transaction.id }}</td>
+        <td>{{ transaction.amount }}</td>
+        <td>{{ transaction.balance }}</td>
+        <td>{{ transaction.label }}</td>
+        <td>{{ transaction.date }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

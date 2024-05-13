@@ -1,0 +1,49 @@
+/* Styling for the main container */
+.container {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the input fields, select, and button */
+input[type="number"],
+select,
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Styling for the result display */
+.result {
+  margin-top: 10px;
+}
+
+/* Styling for the last operation result */
+.last-operation {
+  margin-top: 20px;
+}
+
+/* Styling for the historical area */
+.historical-area {
+  margin-top: 20px;
+}
+
+/* Styling for the list items in the historical area */
+.historical-area li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+/* Styling for the remove button */
+.remove-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}

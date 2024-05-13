@@ -1,0 +1,16 @@
+h2 {
+  text-align: center; /* Center-align the heading */
+  margin-top: 20px; /* Add some top margin for spacing */
+}
+
+ul {
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  margin-bottom: 10px; /* Add some bottom margin between list items */
+}
+
+li:last-child {
+  margin-bottom: 0; /* Remove bottom margin from last list item */
+}

@@ -1,0 +1,47 @@
+
+<app-header></app-header>
+
+<h2>Exercise 2</h2>
+
+<!-- calculator -->
+<div class="container">
+  <h2>Calculator</h2>
+  <input type="number" [(ngModel)]="operand1">
+  <select [(ngModel)]="operator">
+    <option value="+" selected>+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="number" [(ngModel)]="operand2">
+  <button (click)="calculate()">Calculate</button>
+  @if (result !== null){
+    <div class="result"><p>Result: {{ result }}</p></div>
+  }
+  @else {
+    <div><p>Operation not valid</p></div>
+  }
+</div>
+
+<!-- last result -->
+<div class="last-operation">
+  <h3>Last Operation Result:</h3>
+  @if ("lastOperation") {
+    <p>{{ lastOperation }}</p>
+  }
+</div>
+
+<!-- historical area -->
+<div class="historical-area">
+  <h3>Historical Area:</h3>
+  <ul>
+    @for (operation of operations; track operation.time) {
+      <li>
+        <span>{{ operation.time | date:'medium' }}</span> -----
+        <span>{{ operation.operation }}</span> =
+        <span>{{ operation.result }}</span>
+        <button (click)="removeOperation(operation)">Remove</button>
+      </li>
+    }
+  </ul>
+</div>
